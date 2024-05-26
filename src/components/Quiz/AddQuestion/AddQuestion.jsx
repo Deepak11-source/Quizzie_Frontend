@@ -236,7 +236,7 @@ const AddQuestion = ({ setIsShareQuiz, setIsAddQuestions, setIsCreateQuiz, editQ
             setIsAddQuestions(false);
             setIsCreateQuiz(false);
             setQuizLinkId(
-              `${import.meta.env.VITE_FRONTEND_URL}/test/${response.data.quiz._id}`
+              `https://quizzie-topaz.vercel.app/test/${response.data.quiz._id}`
             );
             // navigate("/dashboard");
           }
@@ -297,7 +297,7 @@ const AddQuestion = ({ setIsShareQuiz, setIsAddQuestions, setIsCreateQuiz, editQ
           setIsAddQuestions(false);
           setIsShareQuiz(true);
           setQuizLinkId(
-            `${import.meta.env.VITE_FRONTEND_URL}/test/${response.data.quiz._id}`
+            `https://quizzie-topaz.vercel.app/test/${response.data.quiz._id}`
           );
         }
       } catch (error) {

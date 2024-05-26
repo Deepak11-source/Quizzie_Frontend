@@ -29,7 +29,7 @@ const Sidebar = ({ activeTabKey }) => {
 
     return (
         <div className={styles.sidebarContainer}>
-            <h1 className={styles.sidebarTitle}>QUIZZIE</h1>
+            <h1 className={styles.sidebarTitle} onClick={() => navigate('/dashboard')}>QUIZZIE</h1>
             <div className={styles.sidebarTabs}>
                 <div className={`${styles.tabs} ${activeTab == "dashboard" ? styles.sidebarTab : ""}`}  onClick={() => handleTabChange('dashboard')}>
                     Dashboard
