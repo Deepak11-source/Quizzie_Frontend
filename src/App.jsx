@@ -22,6 +22,7 @@ const App = () => {
       </Route>
       
       <Route path='/test/:id' element={<QuizChallenge />} />
+      <Route path="*" component={() => <h1>404 Not Found</h1>} />
       
       <Route path='/analytics' element={<PrivateRoute />}>
         <Route path="" element={<QuizStats />} />
