@@ -61,6 +61,13 @@
   cursor: pointer;
 }
 
+.submitButton button:hover {
+  background-color: #849cff; 
+  color: #ffffff; 
+  transform: scale(1.05); 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
 .inputBox.error input {
   border: 2px solid red !important;
 }
