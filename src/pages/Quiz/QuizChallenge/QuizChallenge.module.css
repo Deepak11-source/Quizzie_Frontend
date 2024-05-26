@@ -1,0 +1,380 @@
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: #041325;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quizContainer {
+  height: 85vh;
+  width: 85vw;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding-bottom: 25px;
+}
+
+.quizHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.quizHeader p {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+}
+
+.questionLength {
+  color: #474444;
+}
+
+.timerInfo {
+  color: red;
+}
+
+.quizQuestions {
+  padding: 0 2%;
+  width: 100%;
+}
+
+.quizQuestions div {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  color: #474444;
+}
+
+.quizOptions {
+  width: 75%;
+  height: 53%;
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  margin: auto;
+}
+
+.optionTextImg,
+.optionText,
+.optionImg {
+  width: 45%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.optionTextImg div,
+.optionText div {
+  width: 45%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.optionTextImg img {
+  width: 40%;
+  height: 80%;
+  border-radius: 10px;
+}
+
+.optionText {
+  padding: 0 1%;
+  text-align: center;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.optionImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.quizAction {
+  height: 8%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quizAction button {
+  height: 100%;
+  width: 18%;
+  font-size: x-large;
+  outline: none;
+  border: none;
+  background-color: #60b84b;
+  font-weight: 600;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+.quizAction button:hover {
+  background-color: #4caf50; /* Change background color on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Change box shadow on hover */
+}
+
+.highlightOption {
+  border: 4px solid #5076ff;
+}
+
+.pollResult {
+  height: 85vh;
+  width: 85vw;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pollResult div {
+  width: 48%;
+  height: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  color: #474444;
+}
+
+.QAResult {
+  height: 85vh;
+  width: 85vw;
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.QAResult div {
+  height: 80%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.QAResult div img {
+  height: 45vh;
+  width: 25vw;
+}
+
+.QAResult div p {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  color: #474444;
+}
+
+.finalScore {
+  color: #60b84b;
+}
+
+@media screen and (min-width: 250px) and (max-width: 450px) {
+  .quizContainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    border-radius: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .quizHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+  }
+
+  .quizHeader p {
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+
+  .quizQuestions {
+    padding: 0 2%;
+    width: 100%;
+  }
+
+  .quizQuestions div {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .quizOptions {
+    height: 45%;
+    width: 80%;
+    margin-top: 0;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4%;
+    margin: 0;
+  }
+
+  .optionTextImg {
+    height: 22%;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+
+  .optionTextImg div {
+    width: 50%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .optionTextImg img {
+    height: 85%;
+    width: 45%;
+    border-radius: 5px;
+  }
+
+  .optionText {
+    height: 22%;
+    width: 90%;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 0 1.5%;
+    font-size: 0.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .optionText div {
+    width: 80%;
+    text-align: center;
+    font: 600 1.2rem/1 "Poppins", sans-serif;
+    cursor: pointer;
+  }
+
+  .optionImg {
+    height: 22%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+
+  .optionImg img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .quizAction {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quizAction button {
+    height: 100%;
+    width: 45%;
+    font-size: large;
+    outline: none;
+    border: none;
+    background-color: #60b84b;
+    font-weight: 600;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .highlightOption {
+    border: 2px solid #5076ff;
+  }
+
+  .pollResult {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pollResult div {
+    width: 70%;
+    height: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .QAResult {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .QAResult div {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+
+  .QAResult div img {
+    height: 25vh;
+    width: 45vw;
+  }
+
+  .QAResult div p {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,118 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 60%;
+  justify-content: space-evenly;
+}
+
+.inputBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  text-align: right; /* Aligning text to right */
+}
+
+.inputBox label {
+  width: 35%;
+  text-align: right;
+  font-weight: 500;
+  color: #474444;
+}
+
+.inputBox input {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  width: 60%;
+  height: 35px;
+  padding-left: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.inputBox p {
+  position: absolute;
+  left: 42%;
+  top: 105%;
+  font-size: smaller;
+  color: red;
+}
+
+.submitButton {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitButton button {
+  width: 30%;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  outline: none;
+  background-color: #a9bcff;
+  font-weight: 600;
+  font-size: medium;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.inputBox.error input {
+  border: 2px solid red !important;
+}
+
+.inputBox input::placeholder {
+  color: #999;
+}
+
+.inputBox input.error::placeholder {
+  color: red;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .formContainer {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .inputBox {
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .inputBox label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px; /* This line is different */
+  }
+
+  .inputBox input {
+    width: 100%;
+    height: 35px;
+    padding: 0 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .inputBox p {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    font-size: smaller;
+    color: red;
+  }
+
+  .submitButton button {
+    width: 70%;
+    max-width: 200px;
+    height: 40px;
+  }
+}

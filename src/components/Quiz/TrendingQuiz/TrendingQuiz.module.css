@@ -1,0 +1,42 @@
+.trendingQuizContainer {
+    width: 22%;
+    padding: 0 10px;
+    border-radius: 8px;
+    background-color: white;
+    height: 12vh;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .trendingQuiz {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+  }
+  
+  .quizName {
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #474444;
+  }
+  
+  .impression {
+    color: #FF5D01;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+  
+  .trendingQuizCreatedAt {
+    font-size: 0.8rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #60B84B;
+  }
+  

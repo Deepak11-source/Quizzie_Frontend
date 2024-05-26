@@ -1,0 +1,69 @@
+.mainContainer {
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  border-radius: 10px;
+  padding: 20px;
+  height: 45vh;
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.shareHeading {
+  width: 60%;
+}
+
+.shareHeading h1 {
+  font-size: 2.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  color: #474444;
+}
+
+.mainContainer input {
+  border: none;
+  outline: none;
+  background-color: #ededed;
+  height: 16%;
+  width: 70%;
+  border-radius: 10px;
+  padding: 2%;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #474444;
+}
+
+.mainContainer button {
+  border: none;
+  outline: none;
+  background-color: #60b84b;
+  color: white;
+  height: 14%;
+  width: 30%;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mainContainer button:hover {
+  background-color: #4caf50; /* Change background color on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Change box shadow on hover */
+}
+
+
+.closeIcon {
+    position: absolute;
+    top: 15px;
+    right: 15px; 
+    cursor: pointer;
+    width: 18px;
+}

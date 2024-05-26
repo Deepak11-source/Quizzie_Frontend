@@ -1,0 +1,59 @@
+.parentContainer {
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  h1 {
+    font-family: "Jomhuria", sans-serif;
+    font-size: 5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+  }
+  
+  .childContainer {
+    height: 80vh;
+    width: 88vw;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgb(207, 205, 205);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    width: 30%;
+    height: 35px;
+    align-items: center;
+    font-weight: 600;
+    justify-content: space-between;
+  }
+  
+  .buttonContainer div {
+    height: 100%;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .buttonActive {
+    box-shadow: 0 0 40px 5px #0019ff3d;
+  }
+
+  @media screen and (max-width: 768px) {
+    .buttonContainer {
+      width: 100%;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  }
+  

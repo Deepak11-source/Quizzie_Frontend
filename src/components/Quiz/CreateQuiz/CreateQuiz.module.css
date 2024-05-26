@@ -1,0 +1,120 @@
+.createQuizContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 45vw;
+  height: 40vh;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.quizNameInputBox {
+  width: 90%;
+  height: 22%;
+  padding-left: 10px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+.createQuizContainer input::placeholder {
+  color: #9f9f9f;
+}
+
+.quizType {
+  width: 90%;
+  height: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+  font-size: large;
+  gap: 10%;
+}
+
+.notActive,
+.active {
+  width: 22%;
+  height: 80%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: large;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notActive {
+  color: gray;
+  background: white;
+}
+
+.notActive:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.active {
+  color: white;
+  background-color: #60b84b;
+}
+
+.buttonContainer {
+  width: 90%;
+  height: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.buttonContainer button {
+  width: 40%;
+  height: 80%;
+  border: none;
+  outline: none;
+  font-size: large;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.continueBtn,
+.cancelBtn {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.continueBtn {
+  width: 40%;
+  background-color: #60b84b;
+  color: white;
+}
+
+.continueBtn:hover {
+  background-color: #4caf50;
+}
+
+.cancelBtn {
+  width: auto;
+  background-color: white;
+  color: #474444;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cancelBtn:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}

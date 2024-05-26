@@ -1,0 +1,63 @@
+.sidebarContainer{
+    height: 100vh;
+    width: 16vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebarTitle{
+    font-family: Jomhuria, sans-serif;
+    font-size: 4.5rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.sidebarTabs{
+    width: 100%;
+    height: 82%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7%;
+}
+
+.tabs{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #474444;
+    font-family: "Poppins", sans-serif;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.logoutButton{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #474444;
+    font-family: "Poppins", sans-serif;
+}
+
+.sidebarTab{
+    box-shadow: 0 0 5px 1px gray;
+    padding: 3%;
+}
+
+.seperator {
+    border-color: black;
+}
+
+.btn {
+    cursor: pointer;
+}
+
