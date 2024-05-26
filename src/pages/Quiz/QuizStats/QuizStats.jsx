@@ -50,7 +50,7 @@ const QuizStats = () => {
     const shareQuiz = async (e) => {
         const { id } = e.target
         try {
-            await navigator.clipboard.writeText(`https://quizzie-topaz.vercel.app/test/${id}`);
+            await navigator.clipboard.writeText(`${import.meta.env.VITE_FRONTEND_URL}/test/${id}`);
             toast.success("Link copied to Clipboard");
         } catch (error) {
             toast.error("Failed to copy the link");
