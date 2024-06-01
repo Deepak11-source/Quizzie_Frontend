@@ -9,12 +9,21 @@
 }
 
 .sidebarContainer {
-    width: 17%;
+    width: 16%;
 }
 
 .questionAnalysisContainer {
-    width: 83%;
+    width: 84%;
     padding: 0 5%;
-
     background: #EDEDED;
+}
+
+.loaderDiv {
+    margin-top: 25%;
+    margin-left: 50%;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
 }

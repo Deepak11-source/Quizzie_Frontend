@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import trophy from '../../../assets/trophy.png'
 import Timer from '../../../components/Timer/Timer';
+import Loader from '../../../assets/Loader.gif';
 
 const QuizChallenge = () => {
   const [quizId, setQuizId] = useState(null);
@@ -15,6 +16,8 @@ const QuizChallenge = () => {
   const [quizResult, setQuizResult] = useState(false);
   const [quizTimer, setQuizTimer] = useState(true);
   const { id } = useParams();
+  
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if(id) {
@@ -38,11 +41,14 @@ const QuizChallenge = () => {
 
   const fetchQuizData = async (id) => {
     try {
+      setLoading(true);
       const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/quiz/getQuizByID/${id}`);      
       setQuizData(response.data.quiz);
       setQuizQuestions(response.data.quiz.questions);
     } catch (error) {
       console.log(error);
+    } finally {
+      setLoading(false); 
     }
   }
 
@@ -111,6 +117,10 @@ const QuizChallenge = () => {
 
   return (
     <div className={styles.mainContainer}>
+      {loading ? (
+        <img src={Loader} alt='Loading' className={styles.loader}/>
+    ) : (
+      <>
       {!quizResult && (
         <div className={styles.quizContainer}>        
           <div className={styles.quizHeader}>
@@ -162,7 +172,9 @@ const QuizChallenge = () => {
             <p>Your score is {" "}<span className={styles.finalScore}>0{quizScore}/0{quizQuestions.length}</span></p>
           </div>          
         </div>
-      )}          
+      )}
+      </>
+    )}         
     </div>
   )
 }

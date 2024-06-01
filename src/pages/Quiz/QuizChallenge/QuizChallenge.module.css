@@ -198,6 +198,11 @@
   color: #60b84b;
 }
 
+.loader {
+  width: 40px;
+  height: 40px;
+}
+
 @media screen and (min-width: 250px) and (max-width: 450px) {
   .quizContainer {
     height: 100vh;

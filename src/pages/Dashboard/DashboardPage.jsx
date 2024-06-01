@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import styles from './DashboardPage.module.css'
-import axios from 'axios'
-import { jwtDecode } from "jwt-decode";
-import Sidebar from '../../components/Sidebar/Sidebar'
-import TrendingQuiz from '../../components/Quiz/TrendingQuiz/TrendingQuiz'
-
+import React, { useEffect, useState } from 'react';
+import styles from './DashboardPage.module.css';
+import {jwtDecode} from "jwt-decode";
+import Sidebar from '../../components/Sidebar/Sidebar';
+import TrendingQuiz from '../../components/Quiz/TrendingQuiz/TrendingQuiz';
+import { fetchTrendingQuizzes, fetchAllQuiz } from '../../api/quiz';
 
 const DashboardPage = () => {
     const token = localStorage.getItem('token');
@@ -14,52 +13,17 @@ const DashboardPage = () => {
     const[quizData, setQuizData] = useState([]);
     
     useEffect(()=>{
-      fetchTrendingQuizzes();
-    },[token]);
-  
-    const fetchTrendingQuizzes = async () => {
-      try {
-        if (!token) {
-          throw new Error('No token found');
-        }        
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/quiz/getTrendingQuizzes?createdBy=${userId}`,
-          {
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );  
-        setTrendingQuiz(response.data.filteredQuizzes);
-      } catch (error) {
-        console.log(error);
-      }
-    };
+      fetchTrendingQuizzes(userId, token)
+        .then(data => setTrendingQuiz(data))
+        .catch(error => console.error("Error fetching trending quizzes: ", error));
+    },[userId, token]);
   
     useEffect(()=>{
-      fetchAllQuiz();
-    },[token]);
+      fetchAllQuiz(userId, token)
+        .then(data => setQuizData(data))
+        .catch(error => console.error("Error fetching all quizzes: ", error));
+    },[userId, token]);
     
-    const fetchAllQuiz = async () => {
-      try {
-        const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/quiz/getAllQuiz?createdBy=${userId}`,
-          {
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-        setQuizData(response.data.quizzes);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-  
     const totalNumberOfQuestions = quizData.reduce(
       (accumulator, quiz) => accumulator + quiz.questions.length,
       0
@@ -117,4 +81,4 @@ const DashboardPage = () => {
     )
 }
 
-export default DashboardPage
+export default DashboardPage;

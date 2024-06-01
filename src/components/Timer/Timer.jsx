@@ -18,7 +18,7 @@ const Timer = ({ timer }) => {
       }, 1000);
     }
 
-    return () => clearInterval(timerInterval); // Cleanup function
+    return () => clearInterval(timerInterval); 
   }, [seconds, timer]);
 
   const formatTime = (totalSeconds) => {
